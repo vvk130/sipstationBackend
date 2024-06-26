@@ -9,6 +9,7 @@
       "WebApplication1/1.0.0": {
         "dependencies": {
           "Ardalis.GuardClauses": "4.1.1",
+          "AutoMapper": "13.0.1",
           "Guard.Net": "3.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.6",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
@@ -25,6 +26,17 @@
           "lib/net7.0/Ardalis.GuardClauses.dll": {
             "assemblyVersion": "4.1.1.0",
             "fileVersion": "4.1.1.0"
+          }
+        }
+      },
+      "AutoMapper/13.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.0"
           }
         }
       },
@@ -630,6 +642,13 @@
       "sha512": "sha512-+UcJ2s+gf2wMNrwadCaHZV2DMcGgBU1t22A+jm40P4MHQRLy9hcleGy5xdVWd4dXZPa5Vlp4TG5xU2rhoDYrBA==",
       "path": "ardalis.guardclauses/4.1.1",
       "hashPath": "ardalis.guardclauses.4.1.1.nupkg.sha512"
+    },
+    "AutoMapper/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/Fx1SbJ16qS7dU4i604Sle+U9VLX+WSNVJggk6MupKVkYvvBm4XqYaeFuf67diHefHKHs50uQIS2YEDFhPCakQ==",
+      "path": "automapper/13.0.1",
+      "hashPath": "automapper.13.0.1.nupkg.sha512"
     },
     "Guard.Net/3.0.0": {
       "type": "package",

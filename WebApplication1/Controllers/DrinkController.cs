@@ -32,8 +32,7 @@ namespace WebApplication1.Controllers
         {
             pageIndex = pageIndex < 1 ? 1 : pageIndex;
             pageSize = pageSize < 1 ? 10 : pageSize;
-            var source = _context.Drinks.OrderBy(d => d.Id).AsNoTracking();
-            var paginatedList = await PaginatedList<Drink>.CreateAsync(source, pageIndex, pageSize, cancellationToken);
+            var paginatedList = await _context.Drinks.OrderBy(d => d.Id).AsNoTracking().ToPaginatedListAsync(pageIndex, pageSize, cancellationToken);
 
             return paginatedList == null ? NotFound() : Ok(paginatedList);
         }

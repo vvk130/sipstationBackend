@@ -1,24 +1,9 @@
 using Ardalis.GuardClauses;
 using Microsoft.EntityFrameworkCore;
-
-public class PaginatedList<T> : List<T>
+using WebApplication1.Models;
+public static class PaginatedListExtensions
 {
-    public int PageIndex { get; private set; }
-    public int TotalPages { get; private set; }
-
-    public PaginatedList(List<T> items, int count, int pageIndex, int pageSize)
-    {
-        PageIndex = pageIndex;
-        TotalPages = (int)Math.Ceiling(count / (double)pageSize);
-
-        AddRange(items);
-    }
-
-    public bool HasPreviousPage => PageIndex > 1;
-
-    public bool HasNextPage => PageIndex < TotalPages;
-
-    public static async Task<PaginatedList<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize, CancellationToken ct)
+    public static async Task<PaginatedResponseDto<T>> ToPaginatedListAsync<T>(this IQueryable<T> source, int pageIndex, int pageSize, CancellationToken ct)
     {
         Guard.Against.NullOrEmpty(source);
         // TODO add guards against max values
@@ -27,8 +12,17 @@ public class PaginatedList<T> : List<T>
 
         var count = await source.CountAsync(ct);
         var items = await source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToListAsync(ct);
-        
+        var totalPages = (int)Math.Ceiling(count / (double)pageSize);
 
-        return new PaginatedList<T>(items, count, pageIndex, pageSize);
+        return new PaginatedResponseDto<T>
+        {
+            TotalCount = count,
+            PageIndex = pageIndex,
+            PageSize = pageSize,
+            TotalPages = totalPages,
+            HasPreviousPage = pageIndex > 1,
+            HasNextPage = pageIndex < totalPages,
+            Items = items
+        };
     }
 }
