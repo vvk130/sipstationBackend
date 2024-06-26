@@ -1,7 +1,8 @@
 **Technologies**
-ASP.NET Core (Controllers)
-Automapper
-Entity Framework Core
-PostgreSQL
-XUnit
-Moq
+
+- ASP.NET Core (Controllers)
+- Automapper
+- Entity Framework Core
+- PostgreSQL
+- XUnit
+- Moq
