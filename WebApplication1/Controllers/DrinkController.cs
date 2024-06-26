@@ -27,15 +27,36 @@ namespace WebApplication1.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Retrieves a paginated list of drinks.
+        /// </summary>
+        /// <param name="pageIndex">The page index (starting at 1).</param>
+        /// <param name="pageSize">The size of the page (number of items per page).</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A paginated list of drinks if found; otherwise, a 404 Not Found response.</returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET /Drinks?pageIndex=1&amp;pageSize=10
+        ///
+        /// This endpoint returns a paginated list of drinks. The default page index is 1, and the default page size is 10.
+        /// The response includes metadata about the pagination such as the total count, page index, page size, total pages, 
+        /// and indicators if there are previous or next pages available.
+        ///
+        /// </remarks>
+        /// <response code="200">Returns the paginated list of drinks</response>
+        /// <response code="404">If no drinks are found</response>
         [HttpGet]
         public async Task<IActionResult> GetDrinks(int pageIndex = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
+            // throw new ArgumentOutOfRangeException("Test exception");
             pageIndex = pageIndex < 1 ? 1 : pageIndex;
             pageSize = pageSize < 1 ? 10 : pageSize;
             var paginatedList = await _context.Drinks.OrderBy(d => d.Id).AsNoTracking().ToPaginatedListAsync(pageIndex, pageSize, cancellationToken);
 
             return paginatedList == null ? NotFound() : Ok(paginatedList);
         }
+
         [HttpDelete("{drinkId}")]
         public async Task<IActionResult> DeleteDrinkById([FromRoute] Guid drinkId, CancellationToken cancellationToken)
         {

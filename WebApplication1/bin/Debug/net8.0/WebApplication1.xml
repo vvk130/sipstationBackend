@@ -4,6 +4,27 @@
         <name>WebApplication1</name>
     </assembly>
     <members>
+        <member name="M:WebApplication1.Controllers.DrinkController.GetDrinks(System.Int32,System.Int32,System.Threading.CancellationToken)">
+             <summary>
+             Retrieves a paginated list of drinks.
+             </summary>
+             <param name="pageIndex">The page index (starting at 1).</param>
+             <param name="pageSize">The size of the page (number of items per page).</param>
+             <param name="cancellationToken">The cancellation token.</param>
+             <returns>A paginated list of drinks if found; otherwise, a 404 Not Found response.</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /Drinks?pageIndex=1&amp;pageSize=10
+            
+             This endpoint returns a paginated list of drinks. The default page index is 1, and the default page size is 10.
+             The response includes metadata about the pagination such as the total count, page index, page size, total pages, 
+             and indicators if there are previous or next pages available.
+            
+             </remarks>
+             <response code="200">Returns the paginated list of drinks</response>
+             <response code="404">If no drinks are found</response>
+        </member>
         <member name="M:WebApplication1.Controllers.DrinkController.GetSum(System.Guid,System.Threading.CancellationToken)">
              <summary>
              Retrieves a Drink by its ID.
