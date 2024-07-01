@@ -25,7 +25,7 @@ builder.Services.AddDbContext<PostgresContext>(options =>
 var app = builder.Build();
 
 // app.UseMiddleware<ExceptionHandlingMiddleware>(); TODO: REMOVE, OLD WAY OF DOIND THIS?
-app.UseExceptionHandler();
+// app.UseExceptionHandler();
 
 if (app.Environment.IsDevelopment())
 {

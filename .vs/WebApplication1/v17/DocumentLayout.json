@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{289B7522-8FC9-4914-AFCE-BE992D1B87E3}|Test\\Test.csproj|c:\\users\\testi\\desktop\\23-24-kurssit\\5_tyonhaku_kesa_2024\\.net\\sipstation-final\\webapplication1\\test\\controllers\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289B7522-8FC9-4914-AFCE-BE992D1B87E3}|Test\\Test.csproj|solutionrelative:test\\controllers\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EAFEE917-CB43-4AB5-AC92-B8C6EF992235}|WebApplication1\\WebApplication1.csproj|c:\\users\\testi\\desktop\\23-24-kurssit\\5_tyonhaku_kesa_2024\\.net\\sipstation-final\\webapplication1\\webapplication1\\controllers\\drinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAFEE917-CB43-4AB5-AC92-B8C6EF992235}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\drinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289B7522-8FC9-4914-AFCE-BE992D1B87E3}|Test\\Test.csproj|c:\\users\\testi\\desktop\\23-24-kurssit\\5_tyonhaku_kesa_2024\\.net\\sipstation-final\\webapplication1\\test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289B7522-8FC9-4914-AFCE-BE992D1B87E3}|Test\\Test.csproj|solutionrelative:test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAFEE917-CB43-4AB5-AC92-B8C6EF992235}|WebApplication1\\WebApplication1.csproj|c:\\users\\testi\\desktop\\23-24-kurssit\\5_tyonhaku_kesa_2024\\.net\\sipstation-final\\webapplication1\\webapplication1\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,23 +35,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\Test\\Controllers\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Test\\Controllers\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\Test\\Controllers\\UnitTest1.cs",
+              "RelativeToolTip": "Test\\Controllers\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T18:25:38.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\Test\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Test\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\Test\\UnitTest1.cs",
+              "RelativeToolTip": "Test\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T18:24:26.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DrinkController.cs",
               "DocumentMoniker": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\WebApplication1\\Controllers\\DrinkController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DrinkController.cs",
               "ToolTip": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\WebApplication1\\Controllers\\DrinkController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\DrinkController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAB0AAAAYAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-13T13:12:36.006Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Drink.cs",
               "DocumentMoniker": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\WebApplication1\\Drink.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Drink.cs",
@@ -51,12 +85,11 @@
               "RelativeToolTip": "WebApplication1\\Drink.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T13:06:17.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T13:06:17.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
@@ -64,8 +97,11 @@
               "RelativeToolTip": "WebApplication1\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T12:08:57.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T12:08:57.533Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

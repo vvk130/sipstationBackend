@@ -50,8 +50,6 @@ namespace WebApplication1.Controllers
         public async Task<IActionResult> GetDrinks(int pageIndex = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
             // throw new ArgumentOutOfRangeException("Test exception");
-            pageIndex = pageIndex < 1 ? 1 : pageIndex;
-            pageSize = pageSize < 1 ? 10 : pageSize;
             var paginatedList = await _context.Drinks.OrderBy(d => d.Id).AsNoTracking().ToPaginatedListAsync(pageIndex, pageSize, cancellationToken);
 
             return paginatedList == null ? NotFound() : Ok(paginatedList);
