@@ -30,12 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,7 +40,6 @@
               "RelativeDocumentMoniker": "Test\\Controllers\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\Test\\Controllers\\UnitTest1.cs",
               "RelativeToolTip": "Test\\Controllers\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T18:25:38.658Z"
             },
@@ -95,6 +90,10 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-13T12:08:57.533Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

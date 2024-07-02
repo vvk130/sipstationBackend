@@ -110,3 +110,8 @@ C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\
 C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\Zomp.EFCore.WindowFunctions.Npgsql.dll
 C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\GuardNet.dll
 C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\Z.EntityFramework.Extensions.EFCore.dll
+C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\Z.EntityFramework.Plus.EFCore.dll
+C:\Users\testi\Desktop\23-24-kurssit\5_Tyonhaku_kesa_2024\.net\Sipstation-final\WebApplication1\WebApplication1\bin\Debug\net8.0\Z.Expressions.Eval.dll

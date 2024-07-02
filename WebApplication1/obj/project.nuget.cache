@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xKuM708j9MM=",
+  "dgSpecHash": "2lpE3ZnWFAY=",
   "success": true,
   "projectFilePath": "C:\\Users\\testi\\Desktop\\23-24-kurssit\\5_Tyonhaku_kesa_2024\\.net\\Sipstation-final\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
@@ -57,13 +57,19 @@
     "C:\\Users\\testi\\.nuget\\packages\\system.composition.hosting\\6.0.0\\system.composition.hosting.6.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.composition.runtime\\6.0.0\\system.composition.runtime.6.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.composition.typedparts\\6.0.0\\system.composition.typedparts.6.0.0.nupkg.sha512",
+    "C:\\Users\\testi\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\testi\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.reflection.metadata\\6.0.1\\system.reflection.metadata.6.0.1.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\testi\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
+    "C:\\Users\\testi\\.nuget\\packages\\z.entityframework.extensions.efcore\\8.103.0\\z.entityframework.extensions.efcore.8.103.0.nupkg.sha512",
+    "C:\\Users\\testi\\.nuget\\packages\\z.entityframework.plus.efcore\\8.103.0\\z.entityframework.plus.efcore.8.103.0.nupkg.sha512",
+    "C:\\Users\\testi\\.nuget\\packages\\z.expressions.eval\\6.1.7\\z.expressions.eval.6.1.7.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\zomp.efcore.windowfunctions\\8.0.10\\zomp.efcore.windowfunctions.8.0.10.nupkg.sha512",
     "C:\\Users\\testi\\.nuget\\packages\\zomp.efcore.windowfunctions.npgsql\\8.0.10\\zomp.efcore.windowfunctions.npgsql.8.0.10.nupkg.sha512"
   ],

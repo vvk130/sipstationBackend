@@ -78,6 +78,10 @@
               "target": "Package",
               "version": "[6.6.2, )"
             },
+            "Z.EntityFramework.Plus.EFCore": {
+              "target": "Package",
+              "version": "[8.103.0, )"
+            },
             "Zomp.EFCore.WindowFunctions": {
               "target": "Package",
               "version": "[8.0.10, )"

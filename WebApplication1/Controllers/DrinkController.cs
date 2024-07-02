@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Microsoft.EntityFrameworkCore.Update;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
 using WebApplication1.Data;
 using WebApplication1.Models;
+using Z.EntityFramework.Plus;
 using Zomp.EFCore.WindowFunctions;
 
 namespace WebApplication1.Controllers
@@ -27,32 +30,60 @@ namespace WebApplication1.Controllers
             _context = context;
         }
 
+
+        public static async Task<PaginatedResponseDto<TDto>> Paginated<TEntity, TDto>(DbSet<TEntity> source, IQueryable<TDto> sentItems, int pageIndex = 1, int pageSize = 10, CancellationToken cT = default) where TEntity : class
+        {
+            var items = sentItems.Take(10).Future();
+            var count = source.DeferredCount().FutureValue();
+
+            Guard.Against.NullOrEmpty(items);
+            Guard.Against.Null(source);
+
+            // ONE database round trip is required
+            var paginatedItems = await items.ToListAsync(cT);
+            var itemCount = count.Value;
+
+            var totalPages = (int)Math.Ceiling(itemCount / (double)pageSize);
+
+            return new PaginatedResponseDto<TDto>
+            {
+                TotalCount = itemCount,
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+                TotalPages = totalPages,
+                HasPreviousPage = pageIndex > 1,
+                HasNextPage = pageIndex < totalPages,
+                Items = paginatedItems
+            };
+        }
+
         /// <summary>
-        /// Retrieves a paginated list of drinks.
+        /// Retrieves a paginated list of DrinkDtos.
         /// </summary>
         /// <param name="pageIndex">The page index (starting at 1).</param>
         /// <param name="pageSize">The size of the page (number of items per page).</param>
         /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>A paginated list of drinks if found; otherwise, a 404 Not Found response.</returns>
+        /// <returns>A paginated response containing a list of DTO items.</returns>
         /// <remarks>
         /// Sample request:
         ///
         ///     GET /Drinks?pageIndex=1&amp;pageSize=10
         ///
-        /// This endpoint returns a paginated list of drinks. The default page index is 1, and the default page size is 10.
-        /// The response includes metadata about the pagination such as the total count, page index, page size, total pages, 
-        /// and indicators if there are previous or next pages available.
-        ///
+        /// This endpoint returns a paginated list of DrinkDtos. The default page index is 1, 
+        /// and the default page size is 10. The response includes metadata about the pagination such as the total count, 
+        /// page index, page size, total pages, and indicators if there are previous or next pages available.
         /// </remarks>
-        /// <response code="200">Returns the paginated list of drinks</response>
-        /// <response code="404">If no drinks are found</response>
+        /// <response code="200">Returns the paginated list of items.</response>
+        /// <response code="404">If no items are found.</response>
+        /// <seealso cref="PaginatedResponseDto{TDto}"/>
+        /// <exception cref="ArgumentNullException">Thrown when <paramref name="source"/> or <paramref name="sentItems"/> is null or empty.</exception>
         [HttpGet]
-        public async Task<IActionResult> GetDrinks(int pageIndex = 1, int pageSize = 10, CancellationToken cancellationToken = default)
+        public async Task<IActionResult> GetDrinks(int pageIndex = 1, int pageSize = 10, CancellationToken cT = default)
         {
-            // throw new ArgumentOutOfRangeException("Test exception");
-            var paginatedList = await _context.Drinks.OrderBy(d => d.Id).AsNoTracking().ToPaginatedListAsync(pageIndex, pageSize, cancellationToken);
+            var items = _context.Drinks.OrderBy(x => x.Id).Select(d => new DrinkDto { Id = d.Id, Name = d.Name });
 
-            return paginatedList == null ? NotFound() : Ok(paginatedList);
+            var post = await Paginated(_context.Drinks, items, pageIndex, pageSize, cT);
+            return post == null ? NotFound() : Ok(post);
         }
 
         [HttpDelete("{drinkId}")]

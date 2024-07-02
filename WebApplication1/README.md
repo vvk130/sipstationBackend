@@ -3,6 +3,7 @@
 - ASP.NET Core (Controllers)
 - Automapper
 - Entity Framework Core
+- EF Query Future
 - PostgreSQL
 - Ardalis.guardclauses: easy error handling
 - Testing: XUnit, Moq
