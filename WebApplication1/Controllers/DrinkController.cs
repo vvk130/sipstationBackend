@@ -30,33 +30,6 @@ namespace WebApplication1.Controllers
             _context = context;
         }
 
-
-        public static async Task<PaginatedResponseDto<TDto>> Paginated<TEntity, TDto>(DbSet<TEntity> source, IQueryable<TDto> sentItems, int pageIndex = 1, int pageSize = 10, CancellationToken cT = default) where TEntity : class
-        {
-            var items = sentItems.Take(10).Future();
-            var count = source.DeferredCount().FutureValue();
-
-            Guard.Against.NullOrEmpty(items);
-            Guard.Against.Null(source);
-
-            // ONE database round trip is required
-            var paginatedItems = await items.ToListAsync(cT);
-            var itemCount = count.Value;
-
-            var totalPages = (int)Math.Ceiling(itemCount / (double)pageSize);
-
-            return new PaginatedResponseDto<TDto>
-            {
-                TotalCount = itemCount,
-                PageIndex = pageIndex,
-                PageSize = pageSize,
-                TotalPages = totalPages,
-                HasPreviousPage = pageIndex > 1,
-                HasNextPage = pageIndex < totalPages,
-                Items = paginatedItems
-            };
-        }
-
         /// <summary>
         /// Retrieves a paginated list of DrinkDtos.
         /// </summary>
@@ -82,7 +55,7 @@ namespace WebApplication1.Controllers
         {
             var items = _context.Drinks.OrderBy(x => x.Id).Select(d => new DrinkDto { Id = d.Id, Name = d.Name });
 
-            var post = await Paginated(_context.Drinks, items, pageIndex, pageSize, cT);
+            var post = await PaginatedListExtensions.Paginated(_context.Drinks, items, pageIndex, pageSize, cT);
             return post == null ? NotFound() : Ok(post);
         }
 
