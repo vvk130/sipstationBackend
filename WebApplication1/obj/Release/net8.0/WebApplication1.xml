@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication1</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication1.Controllers.DrinkController.GetDrinks(System.Int32,System.Int32,System.Threading.CancellationToken)">
+             <summary>
+             Retrieves a paginated list of DrinkDtos.
+             </summary>
+             <param name="pageIndex">The page index (starting at 1).</param>
+             <param name="pageSize">The size of the page (number of items per page).</param>
+             <param name="cancellationToken">The cancellation token.</param>
+             <returns>A paginated response containing a list of DTO items.</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /Drinks?pageIndex=1&amp;pageSize=10
+            
+             This endpoint returns a paginated list of DrinkDtos. The default page index is 1, 
+             and the default page size is 10. The response includes metadata about the pagination such as the total count, 
+             page index, page size, total pages, and indicators if there are previous or next pages available.
+             </remarks>
+             <response code="200">Returns the paginated list of items.</response>
+             <response code="404">If no items are found.</response>
+             <seealso cref="T:WebApplication1.Models.PaginatedResponseDto`1"/>
+             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="source"/> or <paramref name="sentItems"/> is null or empty.</exception>
+        </member>
+        <member name="M:WebApplication1.Controllers.DrinkController.GetSum(System.Guid,System.Threading.CancellationToken)">
+             <summary>
+             Retrieves a Drink by its ID.
+             </summary>
+             <param name="id">The ID of the Drink to retrieve.</param>
+             <param name="cancellationToken">The cancellation token.</param>
+             <returns>The requested Drink if found; otherwise, a 404 Not Found response with a custom message.</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /Drink/{id}
+            
+             </remarks>
+             <response code="200">Returns the requested Drink</response>
+             <response code="404">If the Drink is not found</response>
+        </member>
+        <member name="M:WebApplication1.Controllers.DrinkController.UpdateDrink(System.Guid,System.Threading.CancellationToken)">
+             <summary>
+             Creates a TodoItem.
+             </summary>
+             <param name="item"></param>
+             <returns>A newly created TodoItem</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "id": 1,
+                    "name": "Item #1",
+                    "isComplete": true
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null</response>
+        </member>
+    </members>
+</doc>

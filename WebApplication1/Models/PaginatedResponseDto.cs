@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 namespace WebApplication1.Models;
 
 public partial class PaginatedResponseDto<T>
