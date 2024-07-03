@@ -18,7 +18,7 @@ using Zomp.EFCore.WindowFunctions;
 namespace WebApplication1.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/v1/[controller]")]
     public class DrinkController : ControllerBase
     {
         private readonly ILogger<DrinkController> _logger;
